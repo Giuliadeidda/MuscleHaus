@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MuscleHaus - Contattaci</title>
+  <meta name="description" content="MuscleHaus è la palestra dove allenarti, crescere e superare i tuoi limiti. Contattaci per maggiori informazioni.">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #e74c3c;
+      --dark: #1c1c1c;
+      --light: #f4f4f4;
+      --white: #fff;
+      --radius: 12px;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--light);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: var(--white);
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 0 20px;
+    }
+
+     header h1 {
+      font-size: 4rem;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      max-width: 600px;
+      margin-bottom: 20px;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+
+    .cta-btn {
+      background-color: var(--primary);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 12px 25px;
+      border-radius: 50px;
+      box-shadow: var(--shadow);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: #c0392b;
+      transform: scale(1.1);
+    }
+
+    nav {
+      background-color: var(--dark);
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 3;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 12px 25px;
+      border-radius: 50px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: var(--primary);
+      bottom: -5px;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.3s ease;
+    }
+
+    nav a:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    nav a:hover {
+      background-color: var(--primary);
+      transform: scale(1.05);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+      color: var(--dark);
+      margin-bottom: 50px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    h3 {
+      text-align: center;
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 30px;
+    }
+
+    .contact-info ul {
+      list-style: none;
+      padding-left: 0;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .contact-info li {
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+
+    .contact-info a {
+      color: var(--dark);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .contact-info a:hover {
+      color: var(--primary);
+    }
+
+    .social {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .social a {
+      font-size: 2rem;
+      color: var(--dark);
+      margin: 0 15px;
+      transition: color 0.3s ease;
+    }
+
+    .social a:hover {
+      color: var(--primary);
+    }
+
+    .form-container form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .form-container input,
+    .form-container textarea {
+      padding: 12px;
+      font-size: 1.1rem;
+      border: 2px solid var(--light);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: border-color 0.3s ease;
+    }
+
+    .form-container input:focus,
+    .form-container textarea:focus {
+      border-color: var(--primary);
+    }
+
+    .form-container button {
+      background-color: var(--primary);
+      color: var(--white);
+      font-size: 1.2rem;
+      padding: 12px 25px;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .form-container button:hover {
+      background-color: #c0392b;
+      transform: scale(1.05);
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 400px;
+      border: 0;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    footer {
+      background-color: var(--dark);
+      color: var(--white);
+      text-align: center;
+      padding: 30px 0;
+      margin-top: 60px;
+      font-size: 1rem;
+    }
+
+    footer p {
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 3rem;
+      }
+
+      header p {
+        font-size: 1.1rem;
+      }
+
+      .cta-btn {
+        font-size: 1rem;
+        padding: 12px 24px;
+      }
+
+      .section-title {
+        font-size: 2.4rem;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>MuscleHaus</h1>
+    <p>💥 Pronto a iniziare il tuo percorso? Contattaci e fai il primo passo verso la trasformazione!</p>
+  </header>
+
+  <nav>
+    <a href="home2.html">Home</a>
+    <a href="servizi2.html">Servizi</a>
+    <a href="contatti2.html">Contatti</a>
+  </nav>
+	<br>
+  <div class="container">
+    <section class="contact-info">
+      <h2 align=center><strong>Contattaci<strong></h2>
+      <ul>
+	  <br>
+        
+		<li><i class="fas fa-envelope"></i> Email: <a href="mailto:info@MuscleHaus.it">info@MuscleHaus.it</a></li>
+        <li><i class="fas fa-phone"></i> Telefono: <a href="tel:+390123456789">+39 012 345 6789</a></li>
+        <li><i class="fas fa-map-marker-alt"></i> Indirizzo: Via Fitness 10, Milano</li>
+      </ul>
+
+      <div class="social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </section>
+
+    <section class="form-container">
+      <h2>Scrivici un messaggio</h2>
+      <form action="#" method="POST">
+        <input type="text" name="nome" placeholder="Il tuo nome" required>
+        <input type="email" name="email" placeholder="La tua email" required>
+        <textarea name="messaggio" rows="5" placeholder="Il tuo messaggio..." required></textarea>
+        <button type="submit">Invia</button>
+      </form>
+    </section>
+
+    <section class="map">
+      <h2>Dove ci troviamo</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.9672735022737!2d9.1900!3d45.4642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDI3JzUwLjIiTiA9wrAxMSczNS42IkU!5e0!3m2!1sit!2sit!4v1715947900000" allowfullscreen></iframe>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 MuscleHaus. Tutti i diritti riservati.</p>
+  </footer>
+
+</body>
+</html>

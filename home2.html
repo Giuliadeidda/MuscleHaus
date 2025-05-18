@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="MuscleHaus è la palestra dove allenarti, crescere e superare i tuoi limiti. Unisciti alla community e trasforma il tuo corpo!"/>
+  <title>MuscleHaus - Il tuo cambiamento inizia qui</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #e74c3c;
+      --dark: #1c1c1c;
+      --light: #f4f4f4;
+      --white: #fff;
+      --radius: 12px;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --gradient: linear-gradient(to right, #e74c3c, #c0392b);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--light);
+      color: #333;
+      line-height: 1.6;
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: var(--white);
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 0 20px;
+      box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.4);
+    }
+
+    header h1 {
+      font-size: 4rem;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      max-width: 600px;
+      margin-bottom: 20px;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+
+    .cta-btn {
+      background: var(--primary);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 14px 30px;
+      border-radius: 50px;
+      box-shadow: var(--shadow);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: #c0392b;
+      transform: scale(1.1);
+    }
+
+    nav {
+      background-color: var(--dark);
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 3;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 12px 25px;
+      border-radius: 50px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: var(--primary);
+      bottom: -5px;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.3s ease;
+    }
+
+    nav a:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    nav a:hover {
+      background-color: var(--primary);
+      transform: scale(1.05);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+      background-color: #fff;
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      padding: 40px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+      color: var(--dark);
+      margin-bottom: 50px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    .section h2 {
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: var(--primary);
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      text-align: center;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .cta a {
+      background-color: var(--primary);
+      color: white;
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: var(--radius);
+      font-weight: bold;
+      font-size: 1.1rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .cta a:hover {
+      transform: scale(1.05);
+      background-color: #c0392b;
+    }
+
+    footer {
+      background-color: var(--dark);
+      color: var(--white);
+      text-align: center;
+      padding: 25px 0;
+      margin-top: 60px;
+      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    footer p {
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.3rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      .section h2 {
+        font-size: 2rem;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>MuscleHaus</h1>
+    <p>🏋️‍♂️ Allenati. Cresci. Supera i tuoi limiti. Il cambiamento che hai sempre voluto inizia oggi.</p>
+    
+  </header>
+
+  <nav>
+    <a href="home2.html">Home</a>
+    <a href="servizi2.html">Servizi</a>
+    <a href="contatti2.html">Contatti</a>
+  </nav>
+
+  <div class="container">
+    <section class="section">
+      <h2>Benvenuto alla MuscleHaus!</h2>
+	  
+      <p><strong>🔥 Trasforma il tuo corpo. Supera i tuoi limiti.</strong></p>
+	<p>Non è solo palestra — è energia, coach, nutrizione e risultati veri.</p>
+	<p><strong>💪 Allenati smart. Vivi meglio.</strong></p>
+		
+		
+
+      <div class="cta">
+        <a href="contatti2.html">Prenota la tua prova gratuita</a>
+      </div>
+	  
+	<br> 
+	<br>
+	  
+	  
+	  
+	  
+	  
+	  <img src="allenamento.jpeg" width="100%" >
+    </section>
+
+    <section class="section">
+      <h2>Orari di apertura</h2>
+      <p><strong>Aperti 7 giorni su 7</strong> – Perché il tuo benessere non si prende pause.</p>
+      <p>🗓️ Lunedì - Venerdì: 6:00 - 22:00<br>
+         🗓️ Sabato: 8:00 - 20:00<br>
+         🗓️ Domenica: 9:00 - 14:00</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 MuscleHaus. Tutti i diritti riservati.</p>
+  </footer>
+
+</body>
+</html>
